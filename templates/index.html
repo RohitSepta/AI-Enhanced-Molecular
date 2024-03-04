@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Prompt Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-new mb-4">AI Generator</h1>
+        <div class="form-group">
+            <label for="textInput">Write Message :</label>
+            <textarea id="textInput" class="form-control" rows="4" placeholder="Enter your message..."></textarea>
+        </div>
+        <br>
+        <button class="btn btn-success" onclick="generateResponse()">Generate Response</button>
+        <button class="btn btn-warning" onclick="copyResponse()">Copy Response</button>
+        <br>
+        <div class="mt-4 typing-effect">
+            <h2 class="text-secondary mb-3">Generated Response:</h2>
+            <p id="response" class="font-weight-bold"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
